@@ -1,6 +1,6 @@
 import pandas as pd
 
-class DataLoader:
+class ExcelLoader:
     def __init__(self, file_path):
         self.file_path = file_path
 

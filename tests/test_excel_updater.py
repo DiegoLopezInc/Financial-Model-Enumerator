@@ -1,9 +1,9 @@
 import unittest
-from data_updater import DataUpdater
+from excel_updater import ExcelUpdater
 
-class TestDataUpdater(unittest.TestCase):
+class TestExcelUpdater(unittest.TestCase):
     def test_update_value(self):
-        updater = DataUpdater('data/financial_model.xlsx')
+        updater = ExcelUpdater('data/financial_model.xlsx')
         updater.update_value('Revenue', 100000)
         updater.save('data/updated_financial_model.xlsx')
         # Assuming there's a method to verify the update

@@ -38,8 +38,8 @@ class FinancialModelEnumerator:
             self.workbook.save(self.file_path)
 
 # Usage
-enumerator = FinancialModelEnumerator('financial_model.xlsx')
+enumerator = FinancialModelEnumerator('data/financial_model.xlsx')
 enumerator.enumerate_cells('Sheet1')
 key_metrics = enumerator.identify_key_metrics('Sheet1', ['Revenue', 'Expenses'])
 enumerator.update_values('Sheet1', 'Revenue', 100000)
-enumerator.save('updated_financial_model.xlsx')
+enumerator.save('data/updated_financial_model.xlsx')

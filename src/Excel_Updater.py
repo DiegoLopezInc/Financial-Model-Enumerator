@@ -1,6 +1,6 @@
 import pandas as pd
 
-class DataUpdater:
+class ExcelUpdater:
     def __init__(self, file_path):
         self.file_path = file_path
         self.df = pd.read_excel(file_path)

@@ -4,3 +4,15 @@
 *.txt
 *.log
 
+*.Dockerfile
+*.dockerfile
+*.Dockerfile.dev
+*.Dockerfile.prod
+*.Dockerfile.dev
+*.Dockerfile.prod
+*.Dockerfile.dev
+*.Dockerfile.prod
+*.docker-compose.yml
+*.yml
+
+

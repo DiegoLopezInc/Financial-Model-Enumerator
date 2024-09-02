@@ -1,9 +1,9 @@
 import unittest
-from data_loader import DataLoader
+from excel_loader import ExcelLoader
 
-class TestDataLoader(unittest.TestCase):
+class TestExcelLoader(unittest.TestCase):
     def test_load_sheet(self):
-        loader = DataLoader('data/financial_model.xlsx')
+        loader = ExcelLoader('data/financial_model.xlsx')
         df = loader.load_sheet('Sheet1')
         self.assertIsNotNone(df)
 
