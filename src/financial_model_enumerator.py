@@ -10,8 +10,9 @@ class FinancialModelEnumerator:
     def enumerate_cells(self, sheet_name):
         sheet = self.workbook[sheet_name]
         for row in sheet.iter_rows(values_only=True):
-            print(row)  # Print all cells in each row
-    
+            # print(row)  # Print all cells in each row
+            pass
+
     def identify_key_metrics(self, sheet_name, keywords):
         sheet = self.workbook[sheet_name]
         key_metrics = {}
@@ -28,7 +29,7 @@ class FinancialModelEnumerator:
                 if cell.value == key_metric:
                     target_cell = sheet.cell(row=cell.row, column=cell.column + 1)
                     target_cell.value = new_value
-                    print(f"Updated {key_metric} to {new_value} in row {cell.row}")
+                    # print(f"Updated {key_metric} to {new_value} in row {cell.row}")
                     break
 
     def save(self, new_file_path=None):
@@ -36,10 +37,3 @@ class FinancialModelEnumerator:
             self.workbook.save(new_file_path)
         else:
             self.workbook.save(self.file_path)
-
-# Usage
-enumerator = FinancialModelEnumerator('data/financial_model.xlsx')
-enumerator.enumerate_cells('Sheet1')
-key_metrics = enumerator.identify_key_metrics('Sheet1', ['Revenue', 'Expenses'])
-enumerator.update_values('Sheet1', 'Revenue', 100000)
-enumerator.save('data/updated_financial_model.xlsx')

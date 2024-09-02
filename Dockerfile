@@ -14,7 +14,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 80
 
 # Define environment variable
-ENV NAME World
+ENV NAME=World
+
+# Set PYTHONPATH to include /app
+ENV PYTHONPATH=/app
 
 # Run the application
 CMD ["python", "src/main.py"]
